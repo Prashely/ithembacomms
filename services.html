@@ -23,6 +23,8 @@
       }
       body {
         font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+        width: 100%;
       }
       ::-webkit-scrollbar {
         width: 8px;
@@ -161,13 +163,13 @@
     <!-- Sticky Navigation -->
     <nav
       id="mainNav"
-      class="sticky top-0 z-50 bg-white py-4 px-4 md:px-8 transition-all duration-300 border-b border-gray-100"
+      class="sticky top-0 z-50 bg-white py-4 px-3 md:px-8 transition-all duration-300 border-b border-gray-100 w-full"
     >
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
         <div class="flex items-center gap-2.5">
           <img
             src="images//ithemba/main-logo.png"
-            class="w-20"
+            class="w-16 md:w-20"
             alt="Ithemba Communication Logo"
           />
         </div>
@@ -350,7 +352,7 @@
       </div>
       <div
         id="mobileDrawer"
-        class="mobile-drawer lg:hidden bg-white mt-4 px-4 flex flex-col gap-4 pb-5 rounded-2xl shadow-lg"
+        class="mobile-drawer lg:hidden bg-white mt-4 px-3 flex flex-col gap-4 pb-5 rounded-2xl shadow-lg max-w-full overflow-hidden"
       >
         <a href="index.html" class="font-medium text-gray-700 py-3 border-b"
           >Home</a
