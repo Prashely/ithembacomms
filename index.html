@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iThemba Communications | Home</title>
+    <meta
+      name="description"
+      content="iThemba Communications - South African telecom experts delivering professional technical solutions, supply, installation and maintenance."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f5f7fa;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0d2b6e;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #7dc242;
+      }
+      .nav-glass {
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      }
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      }
+      .animate-on-scroll.animated {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .stat-number {
+        font-feature-settings: "tnum";
+        font-variant-numeric: tabular-nums;
+      }
+      .mega-dropdown {
+        visibility: hidden;
+        opacity: 0;
+        transition:
+          visibility 0.2s,
+          opacity 0.2s ease;
+      }
+      .mega-dropdown.open {
+        visibility: visible;
+        opacity: 1;
+      }
+      .mobile-drawer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out;
+      }
+      .mobile-drawer.open {
+        max-height: 500px;
+      }
+      .whatsapp-pulse {
+        animation: pulse-ring 1.5s infinite;
+      }
+      @keyframes pulse-ring {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+        }
+        70% {
+          box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+      .nav-link-active {
+        position: relative;
+        color: #0d2b6e;
+        font-weight: 600;
+      }
+      .nav-link-active::after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #7dc242;
+        border-radius: 2px;
+        animation: slideIn 0.2s ease-out;
+      }
+      @keyframes slideIn {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-navy": "#0D2B6E",
+              "brand-green": "#7DC242",
+              "brand-dark": "#1A1A2E",
+              "brand-grey": "#F5F7FA",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="antialiased">
+    <!-- Top Bar -->
+    <div
+      class="bg-brand-navy text-white/80 text-sm py-2.5 px-4 md:px-8 hidden md:block"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex gap-6">
+          <span
+            ><i class="fas fa-envelope text-brand-green mr-2"></i>
+            info@ithembacomms.co.za</span
+          ><span
+            ><i class="fas fa-phone text-brand-green mr-2"></i> +27 (0)10 023
+            1594</span
+          ><span
+            ><i class="fab fa-whatsapp text-brand-green mr-2"></i> +27 (0)63 455
+            5248</span
+          >
+        </div>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-brand-green"
+            ><i class="fab fa-facebook-f"></i></a
+          ><a href="#" class="hover:text-brand-green"
+            ><i class="fab fa-instagram"></i></a
+          ><a href="#" class="hover:text-brand-green"
+            ><i class="fab fa-x-twitter"></i></a
+          ><a href="#" class="hover:text-brand-green"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav
+      id="mainNav"
+      class="sticky top-0 z-50 bg-white py-4 px-4 md:px-8 transition-all duration-300 border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-2.5">
+          <img
+            src="images//ithemba/main-logo.png"
+            class="w-20"
+            alt="Ithemba Communication Logo"
+          />
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <div class="flex gap-8">
+            <a
+              href="index.html"
+              class="font-medium text-brand-navy nav-link-active"
+              >Home</a
+            ><a
+              href="about.html"
+              class="font-medium text-gray-700 hover:text-brand-navy"
+              >About</a
+            >
+            <div class="relative" id="servicesDesktopTrigger">
+              <button
+                id="servicesNavBtn"
+                class="font-medium text-gray-700 hover:text-brand-navy flex items-center gap-1.5"
+              >
+                Services <i class="fas fa-chevron-down text-xs"></i>
+              </button>
+              <div
+                id="megaDropdown"
+                class="mega-dropdown absolute left-0 top-full mt-2 w-screen max-w-6xl -translate-x-1/2 left-1/2 bg-white shadow-2xl rounded-2xl p-8 z-50 border border-gray-100"
+              >
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+                  <div class="space-y-3">
+                    <div
+                      class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey group transition"
+                    >
+                      <i class="fas fa-video text-brand-navy text-xl w-6"></i>
+                      <div>
+                        <p class="font-bold">CCTV Systems</p>
+                        <p class="text-xs text-gray-500">
+                          Supply, installation & maintenance.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i
+                        class="fas fa-network-wired text-brand-navy text-xl w-6"
+                      ></i>
+                      <div>
+                        <p class="font-bold">Network Cabling & Fibre</p>
+                        <p class="text-xs text-gray-500">
+                          Structured cabling, high-speed fibre.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i class="fas fa-desktop text-brand-navy text-xl w-6"></i>
+                      <div>
+                        <p class="font-bold">Desktop & Network Support</p>
+                        <p class="text-xs text-gray-500">
+                          Hardware supply & technical support.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i
+                        class="fas fa-photo-video text-brand-navy text-xl w-6"
+                      ></i>
+                      <div>
+                        <p class="font-bold">Audio Visual Systems</p>
+                        <p class="text-xs text-gray-500">
+                          Boardroom & events AV installation.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i class="fas fa-video text-brand-navy text-xl w-6"></i>
+                      <div>
+                        <p class="font-bold">Video & Audio Conferencing</p>
+                        <p class="text-xs text-gray-500">
+                          Seamless global communication.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i class="fas fa-globe text-brand-navy text-xl w-6"></i>
+                      <div>
+                        <p class="font-bold">Domain & Hosting</p>
+                        <p class="text-xs text-gray-500">
+                          Digital identity & reliable hosting.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i
+                        class="fas fa-phone-alt text-brand-navy text-xl w-6"
+                      ></i>
+                      <div>
+                        <p class="font-bold">VoIP & PABX</p>
+                        <p class="text-xs text-gray-500">
+                          Reduce costs, improve connectivity.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i
+                        class="fas fa-keyboard text-brand-navy text-xl w-6"
+                      ></i>
+                      <div>
+                        <p class="font-bold">IT Peripherals</p>
+                        <p class="text-xs text-gray-500">
+                          Quality equipment for your team.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i class="fas fa-print text-brand-navy text-xl w-6"></i>
+                      <div>
+                        <p class="font-bold">Printers & Toners</p>
+                        <p class="text-xs text-gray-500">
+                          Professional printing solutions.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i class="fas fa-wifi text-brand-navy text-xl w-6"></i>
+                      <div>
+                        <p class="font-bold">Internet Service Provider</p>
+                        <p class="text-xs text-gray-500">
+                          High-speed business connectivity.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i
+                        class="fas fa-laptop-code text-brand-navy text-xl w-6"
+                      ></i>
+                      <div>
+                        <p class="font-bold">Web Design</p>
+                        <p class="text-xs text-gray-500">
+                          Modern responsive websites.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 p-3 rounded-xl hover:bg-brand-grey">
+                      <i
+                        class="fas fa-shield-alt text-brand-navy text-xl w-6"
+                      ></i>
+                      <div>
+                        <p class="font-bold">Cyber Security</p>
+                        <p class="text-xs text-gray-500">
+                          Protect your digital assets.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-6 text-center border-t border-gray-100 pt-5">
+                  <a
+                    href="services.html"
+                    class="text-brand-green font-semibold hover:underline inline-flex items-center gap-2"
+                    >View All Services <i class="fas fa-arrow-right text-sm"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <a
+              href="contact.html"
+              class="font-medium text-gray-700 hover:text-brand-navy"
+              >Contact</a
+            >
+          </div>
+          <a
+            href="contact.html"
+            class="bg-brand-green hover:bg-brand-green/90 text-brand-navy rounded-full px-6 py-2.5 font-semibold transition shadow-md"
+            >Get a Quote <i class="fas fa-arrow-right ml-2"></i
+          ></a>
+        </div>
+        <button id="mobileMenuBtn" class="lg:hidden text-2xl text-brand-navy">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div
+        id="mobileDrawer"
+        class="mobile-drawer lg:hidden bg-white mt-4 px-4 flex flex-col gap-4 pb-5 rounded-2xl shadow-lg"
+      >
+        <a href="index.html" class="font-medium text-gray-700 py-3 border-b"
+          >Home</a
+        ><a href="about.html" class="font-medium text-gray-700 py-3 border-b"
+          >About</a
+        >
+        <div class="relative border-b">
+          <button
+            id="mobileServicesBtn"
+            class="font-medium text-gray-700 py-3 w-full text-left flex justify-between"
+          >
+            Services <i class="fas fa-chevron-down text-xs"></i>
+          </button>
+          <div
+            id="mobileServicesDropdown"
+            class="hidden pl-5 flex flex-col gap-3 mt-1 pb-3"
+          >
+            <a href="services.html" class="text-sm text-gray-600"
+              >CCTV Systems</a
+            ><a href="services.html" class="text-sm text-gray-600"
+              >Network Cabling</a
+            ><a href="services.html" class="text-sm text-gray-600"
+              >VoIP & PABX</a
+            ><a
+              href="services.html"
+              class="text-sm text-brand-green font-semibold"
+              >All Services →</a
+            >
+          </div>
+        </div>
+        <a href="contact.html" class="font-medium text-gray-700 py-3 border-b"
+          >Contact</a
+        ><a
+          href="contact.html"
+          class="bg-brand-green text-brand-navy rounded-full px-5 py-2.5 text-center font-semibold"
+          >Get a Quote</a
+        >
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <div
+        class="relative h-screen flex items-center bg-cover bg-center"
+        style="
+          background-image:
+            linear-gradient(95deg, #0d2b6ecc 0%, #0d2b6e99 100%),
+            url(&quot;https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920&q=80&quot;);
+        "
+      >
+        <div
+          class="absolute left-0 top-0 w-1.5 h-3/5 bg-brand-green hidden md:block"
+        ></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-16 text-white">
+          <div
+            class="flex items-center gap-2.5 text-brand-green text-sm font-semibold uppercase tracking-[0.2em]"
+          >
+            <i class="fas fa-signal"></i>
+            <span>South African Telecommunications Experts</span>
+          </div>
+          <h1
+            class="font-heading text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mt-5"
+          >
+            Connecting South Africa's
+            <span class="text-brand-green">Future</span> — One Solution at a
+            Time
+          </h1>
+          <p class="text-white/85 text-lg max-w-xl mt-6 leading-relaxed">
+            Professional telecommunications solutions: supply, installation &
+            maintenance for businesses that demand the best.
+          </p>
+          <div class="flex flex-wrap gap-5 mt-10">
+            <a
+              href="services.html"
+              class="text-brand-navy bg-brand-green hover:bg-brand-green/90 rounded-full px-8 py-3.5 font-semibold transition shadow-lg"
+              >Explore Our Services</a
+            ><a
+              href="contact.html"
+              class="border-2 border-white hover:bg-white hover:text-brand-navy rounded-full px-8 py-3.5 font-semibold transition"
+              >Contact Us Today</a
+            >
+          </div>
+          <div
+            class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+          >
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Strip -->
+      <div class="bg-brand-navy py-14 text-white">
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 text-center gap-8"
+        >
+          <div class="stat-item transform hover:scale-105 transition">
+            <i
+              class="fas fa-calendar-check text-brand-green text-4xl mb-3 block"
+            ></i>
+            <div>
+              <span
+                class="stat-number font-heading text-5xl font-bold"
+                data-target="15"
+                >0</span
+              ><span class="font-bold">+</span>
+            </div>
+            <p class="text-white/60 text-sm uppercase tracking-wider mt-1">
+              Years Experience
+            </p>
+          </div>
+          <div class="stat-item transform hover:scale-105 transition">
+            <i
+              class="fas fa-project-diagram text-brand-green text-4xl mb-3 block"
+            ></i>
+            <div>
+              <span
+                class="stat-number font-heading text-5xl font-bold"
+                data-target="200"
+                >0</span
+              ><span class="font-bold">+</span>
+            </div>
+            <p class="text-white/60 text-sm uppercase tracking-wider mt-1">
+              Projects Completed
+            </p>
+          </div>
+          <div class="stat-item transform hover:scale-105 transition">
+            <i class="fas fa-building text-brand-green text-4xl mb-3 block"></i>
+            <div>
+              <span
+                class="stat-number font-heading text-5xl font-bold"
+                data-target="50"
+                >0</span
+              ><span class="font-bold">+</span>
+            </div>
+            <p class="text-white/60 text-sm uppercase tracking-wider mt-1">
+              Enterprise Clients
+            </p>
+          </div>
+          <div class="stat-item transform hover:scale-105 transition">
+            <i class="fas fa-star text-brand-green text-4xl mb-3 block"></i>
+            <div>
+              <span
+                class="stat-number font-heading text-5xl font-bold"
+                data-target="100"
+                >0</span
+              ><span class="font-bold">%</span>
+            </div>
+            <p class="text-white/60 text-sm uppercase tracking-wider mt-1">
+              Client Satisfaction
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Teaser -->
+      <div
+        class="py-28 max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center"
+      >
+        <div class="w-full lg:w-1/2 animate-on-scroll">
+          <img
+            src="images/home/5.jpg"
+            alt="iThemba team"
+            class="rounded-2xl shadow-2xl rotate-1 object-cover h-[450px] w-full hover:rotate-0 transition duration-500"
+          />
+        </div>
+        <div class="w-full lg:w-1/2 animate-on-scroll">
+          <div class="text-brand-green font-semibold flex items-center gap-2">
+            <i class="fas fa-wifi text-lg"></i> <span>WHO WE ARE</span>
+          </div>
+          <h2
+            class="font-heading text-4xl lg:text-5xl text-brand-navy font-bold mt-3 leading-tight"
+          >
+            Bridging the Gap Between Technology and Results
+          </h2>
+          <p class="text-gray-600 mt-6 leading-relaxed">
+            iThemba Communications is a telecommunications firm geared towards
+            changing the technology industry through the provision of
+            professional technical solutions, supply, installation and
+            maintenance. We bridge the gap between best practice and actionable
+            results with returns on investment.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-8">
+            <span
+              class="bg-brand-grey rounded-full px-5 py-2.5 text-sm font-medium"
+              ><i class="fas fa-trophy text-brand-green mr-2"></i>Quality
+              Excellence</span
+            ><span
+              class="bg-brand-grey rounded-full px-5 py-2.5 text-sm font-medium"
+              ><i class="fas fa-comments text-brand-green mr-2"></i>Clear
+              Communication</span
+            ><span
+              class="bg-brand-grey rounded-full px-5 py-2.5 text-sm font-medium"
+              ><i class="fas fa-headset text-brand-green mr-2"></i>Client
+              Support</span
+            >
+          </div>
+          <a
+            href="about.html"
+            class="inline-flex items-center mt-8 text-brand-navy font-semibold border-b-2 border-brand-green pb-1 hover:gap-2 transition"
+            >Learn More About Us <i class="fas fa-arrow-right ml-2 text-sm"></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Services Preview (6 cards) -->
+      <div class="bg-brand-grey py-28">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <h2
+            class="font-heading text-4xl lg:text-5xl text-brand-navy font-bold"
+          >
+            Our Core Services
+          </h2>
+          <div class="w-20 h-1 bg-brand-green mx-auto mt-4 mb-14"></div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 group"
+            >
+              <img
+                src="images/home/4.jpg"
+                class="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div class="p-6 text-left">
+                <i class="fas fa-camera-cctv text-3xl text-brand-navy mb-3"></i>
+                <h3 class="font-bold text-xl">CCTV Systems</h3>
+                <p class="text-gray-500 mt-2">
+                  Complete surveillance supply, installation and maintenance.
+                </p>
+                <a
+                  href="services.html"
+                  class="text-brand-green font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2"
+                  >Learn More <i class="fas fa-arrow-right text-sm"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 group"
+            >
+              <img src="images/home/3.jpg" class="h-56 w-full object-cover" />
+              <div class="p-6 text-left">
+                <i
+                  class="fas fa-network-wired text-3xl text-brand-navy mb-3"
+                ></i>
+                <h3 class="font-bold text-xl">Network Cabling & Fibre</h3>
+                <p class="text-gray-500 mt-2">
+                  Structured cabling and high-speed fibre network installation.
+                </p>
+                <a
+                  href="services.html"
+                  class="text-brand-green font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2"
+                  >Learn More <i class="fas fa-arrow-right text-sm"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 group"
+            >
+              <img
+                src="images/home/voip.jpg"
+                class="h-56 w-full object-cover"
+              />
+              <div class="p-6 text-left">
+                <i
+                  class="fas fa-phone-volume text-3xl text-brand-navy mb-3"
+                ></i>
+                <h3 class="font-bold text-xl">VoIP & PABX Solutions</h3>
+                <p class="text-gray-500 mt-2">
+                  Modern telephony systems that cut costs and boost
+                  communications.
+                </p>
+                <a
+                  href="services.html"
+                  class="text-brand-green font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2"
+                  >Learn More <i class="fas fa-arrow-right text-sm"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 group"
+            >
+              <img
+                src="images/home/comms.png"
+                class="h-56 w-full object-cover"
+              />
+              <div class="p-6 text-left">
+                <i class="fas fa-tv text-3xl text-brand-navy mb-3"></i>
+                <h3 class="font-bold text-xl">Audio Visual Systems</h3>
+                <p class="text-gray-500 mt-2">
+                  AV systems for boardrooms, training rooms and events.
+                </p>
+                <a
+                  href="services.html"
+                  class="text-brand-green font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2"
+                  >Learn More <i class="fas fa-arrow-right text-sm"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 group"
+            >
+              <img
+                src="images/home/desktop2.jpg"
+                class="h-56 w-full object-cover"
+              />
+              <div class="p-6 text-left">
+                <i class="fas fa-desktop text-3xl text-brand-navy mb-3"></i>
+                <h3 class="font-bold text-xl">Desktop & Network Support</h3>
+                <p class="text-gray-500 mt-2">
+                  End-to-end hardware supply, installation and support.
+                </p>
+                <a
+                  href="services.html"
+                  class="text-brand-green font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2"
+                  >Learn More <i class="fas fa-arrow-right text-sm"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 group"
+            >
+              <img
+                src="images/home/wificluster.png"
+                class="h-56 w-full object-cover"
+              />
+              <div class="p-6 text-left">
+                <i class="fas fa-wifi text-3xl text-brand-navy mb-3"></i>
+                <h3 class="font-bold text-xl">Internet Service Provider</h3>
+                <p class="text-gray-500 mt-2">
+                  High-speed, reliable connectivity for your business.
+                </p>
+                <a
+                  href="services.html"
+                  class="text-brand-green font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2"
+                  >Learn More <i class="fas fa-arrow-right text-sm"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-14">
+            <a
+              href="services.html"
+              class="bg-brand-green hover:bg-brand-green/90 text-white rounded-full px-10 py-3.5 font-semibold transition shadow-md inline-flex items-center gap-2"
+              >View All Services <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process Steps -->
+      <div class="py-28 bg-white text-center">
+        <div class="max-w-6xl mx-auto px-6">
+          <span
+            class="text-brand-green font-semibold text-sm uppercase tracking-wider"
+            ><i class="fas fa-cogs mr-2"></i>OUR PROCESS</span
+          >
+          <h2
+            class="font-heading text-4xl lg:text-5xl text-brand-navy font-bold mt-2"
+          >
+            How We Work
+          </h2>
+          <div class="w-16 h-1 bg-brand-green mx-auto mt-4 mb-14"></div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div class="text-center group">
+              <div
+                class="w-20 h-20 mx-auto bg-orange-500 rounded-full flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 transition"
+              >
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <p class="mt-3 font-semibold text-gray-700">Project Planning</p>
+            </div>
+            <div class="text-center group">
+              <div
+                class="w-20 h-20 mx-auto bg-teal-500 rounded-full flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 transition"
+              >
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <p class="mt-3 font-semibold text-gray-700">Site Surveys</p>
+            </div>
+            <div class="text-center group">
+              <div
+                class="w-20 h-20 mx-auto bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg"
+              >
+                <i class="fas fa-file-signature"></i>
+              </div>
+              <p class="mt-3 font-semibold text-gray-700">Scope of Works</p>
+            </div>
+            <div class="text-center group">
+              <div
+                class="w-20 h-20 mx-auto bg-brand-green rounded-full flex items-center justify-center text-white text-2xl shadow-lg"
+              >
+                <i class="fas fa-handshake"></i>
+              </div>
+              <p class="mt-3 font-semibold text-gray-700">
+                Commercial Agreements
+              </p>
+            </div>
+            <div class="text-center group">
+              <div
+                class="w-20 h-20 mx-auto bg-pink-500 rounded-full flex items-center justify-center text-white text-2xl shadow-lg"
+              >
+                <i class="fas fa-tools"></i>
+              </div>
+              <p class="mt-3 font-semibold text-gray-700">Installations</p>
+            </div>
+            <div class="text-center group">
+              <div
+                class="w-20 h-20 mx-auto bg-brand-navy rounded-full flex items-center justify-center text-white text-2xl shadow-lg"
+              >
+                <i class="fas fa-clipboard-check"></i>
+              </div>
+              <p class="mt-3 font-semibold text-gray-700">
+                SOW Review & Sign-off
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Banner -->
+      <div
+        class="bg-gradient-to-r from-brand-green to-[#5a9e30] py-20 text-white text-center"
+      >
+        <div class="max-w-4xl mx-auto px-6">
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold">
+            Ready to Transform Your Business Technology?
+          </h2>
+          <p class="text-white/90 text-lg mt-3">
+            Get in touch for a free consultation and customised solution.
+          </p>
+          <a
+            href="contact.html"
+            class="inline-flex items-center gap-2 mt-8 bg-brand-navy hover:bg-brand-navy/90 rounded-full px-8 py-3.5 font-semibold transition shadow-lg"
+            >Get Your Free Quote <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <img
+                src="images//ithemba/main-logo-white.png"
+                class="w-25"
+                alt="Ithemba Communication Logo"
+              />
+            </div>
+            <p class="text-gray-400 text-sm">
+              Connecting South Africa's Future.
+            </p>
+            <p class="text-gray-500 text-xs mt-4">
+              Reg No: 2007/010905/23 | VAT: 4620240749
+            </p>
+            <div class="flex gap-4 mt-6">
+              <a href="#" class="text-gray-400 hover:text-brand-green text-xl"
+                ><i class="fab fa-facebook-f"></i></a
+              ><a href="#" class="text-gray-400 hover:text-brand-green text-xl"
+                ><i class="fab fa-instagram"></i></a
+              ><a href="#" class="text-gray-400 hover:text-brand-green text-xl"
+                ><i class="fab fa-x-twitter"></i></a
+              ><a href="#" class="text-gray-400 hover:text-brand-green text-xl"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="font-bold text-lg mb-5 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-10 after:h-0.5 after:bg-brand-green"
+            >
+              Quick Links
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-brand-green flex items-center gap-2"
+                  ><i class="fas fa-chevron-right text-brand-green text-xs"></i
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-brand-green flex items-center gap-2"
+                  ><i class="fas fa-chevron-right text-brand-green text-xs"></i
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-brand-green flex items-center gap-2"
+                  ><i class="fas fa-chevron-right text-brand-green text-xs"></i
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-brand-green flex items-center gap-2"
+                  ><i class="fas fa-chevron-right text-brand-green text-xs"></i
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-5">Our Services</h3>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-circle text-brand-green text-[6px]"></i>CCTV
+                Systems
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-circle text-brand-green text-[6px]"></i>Network
+                Cabling & Fibre
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-circle text-brand-green text-[6px]"></i>VoIP &
+                PABX Solutions
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-circle text-brand-green text-[6px]"></i>Audio
+                Visual Systems
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-circle text-brand-green text-[6px]"></i>Desktop
+                & Network Support
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-circle text-brand-green text-[6px]"></i
+                >Internet Service Provider
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-5">Contact Info</h3>
+            <address class="not-italic space-y-3 text-sm">
+              <p class="flex gap-3">
+                <i class="fas fa-location-dot text-brand-green w-5"></i> No. 3
+                River Road, Riverview Office Park, Midrand, 1685
+              </p>
+              <p class="flex gap-3">
+                <i class="fas fa-phone text-brand-green w-5"></i> +27 (0)10 023
+                1594
+              </p>
+              <p class="flex gap-3">
+                <i class="fas fa-mobile-alt text-brand-green w-5"></i> +27 (0)63
+                455 5248
+              </p>
+              <p class="flex gap-3">
+                <i class="fas fa-envelope text-brand-green w-5"></i>
+                info@ithembacomms.co.za
+              </p>
+            </address>
+          </div>
+        </div>
+        <div
+          class="border-t border-brand-green/30 mt-12 pt-6 text-center text-gray-400 text-sm"
+        >
+          © 2026 iThemba Communications. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a
+      href="https://wa.me/27634555248"
+      target="_blank"
+      class="fixed bottom-6 right-6 z-50 group"
+      ><div
+        class="bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse hover:scale-110 transition"
+      >
+        <i class="fab fa-whatsapp text-white text-3xl"></i
+        ><span
+          class="absolute right-full mr-3 hidden group-hover:inline-block bg-gray-800 text-white px-3 py-1.5 rounded-lg text-sm"
+          >Chat with us!</span
+        >
+      </div></a
+    >
+    <button
+      id="backToTop"
+      class="fixed bottom-6 left-6 z-40 bg-brand-navy text-white w-12 h-12 rounded-full shadow-lg hidden transition hover:bg-brand-green hover:scale-110"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("mainNav")
+          .classList.toggle("nav-glass", window.scrollY > 80);
+        document
+          .getElementById("backToTop")
+          .classList.toggle("hidden", window.scrollY < 400);
+      });
+      document
+        .getElementById("backToTop")
+        .addEventListener("click", () =>
+          window.scrollTo({ top: 0, behavior: "smooth" }),
+        );
+      const observer = new IntersectionObserver(
+        (e) =>
+          e.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animated");
+              if (entry.target.classList.contains("stat-number"))
+                animateNumber(entry.target);
+            }
+          }),
+        { threshold: 0.2 },
+      );
+      document
+        .querySelectorAll(".animate-on-scroll,.stat-number")
+        .forEach((el) => observer.observe(el));
+      function animateNumber(el) {
+        let t = parseInt(el.dataset.target);
+        if (!t || el.innerText != "0") return;
+        let i = 0,
+          step = t / 60;
+        let timer = setInterval(() => {
+          i += step;
+          if (i >= t) {
+            el.innerText = t;
+            clearInterval(timer);
+          } else el.innerText = Math.floor(i);
+        }, 25);
+      }
+      const servicesBtn = document.getElementById("servicesNavBtn"),
+        dropdown = document.getElementById("megaDropdown");
+      let timeout;
+      if (servicesBtn) {
+        servicesBtn.addEventListener("mouseenter", () => {
+          clearTimeout(timeout);
+          dropdown.classList.add("open");
+        });
+        servicesBtn.parentElement.addEventListener("mouseleave", () => {
+          timeout = setTimeout(() => dropdown.classList.remove("open"), 150);
+        });
+        dropdown.addEventListener("mouseenter", () => clearTimeout(timeout));
+        dropdown.addEventListener("mouseleave", () =>
+          dropdown.classList.remove("open"),
+        );
+      }
+      const mobileBtn = document.getElementById("mobileMenuBtn"),
+        drawer = document.getElementById("mobileDrawer");
+      if (mobileBtn)
+        mobileBtn.addEventListener("click", () =>
+          drawer.classList.toggle("open"),
+        );
+      const mobileServicesBtn = document.getElementById("mobileServicesBtn"),
+        mobileDropdown = document.getElementById("mobileServicesDropdown");
+      if (mobileServicesBtn)
+        mobileServicesBtn.addEventListener("click", () =>
+          mobileDropdown.classList.toggle("hidden"),
+        );
+    </script>
+  </body>
+</html>
